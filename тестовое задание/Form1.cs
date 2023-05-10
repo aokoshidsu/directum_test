@@ -17,7 +17,7 @@ namespace тестовое_задание
         //Хранит путь до папки, куда нужно генерировать файлы
         string folderPath = String.Empty;
         //Путь до базового файла, откуда берутся слова для генерации
-        const string WORDS = @"C:\Users\гser\Desktop\тестовое задание\тестовое задание\RUS.txt";
+        const string WORDS = "RUS.txt";
         public Form1()
         {
             InitializeComponent();
