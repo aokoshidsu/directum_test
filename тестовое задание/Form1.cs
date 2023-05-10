@@ -17,7 +17,7 @@ namespace тестовое_задание
         //Хранит путь до папки, куда нужно генерировать файлы
         string folderPath = String.Empty;
         //Путь до базового файла, откуда берутся слова для генерации
-        const string WORDS = "RUS.txt";
+        string WORDS = String.Empty;
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +25,9 @@ namespace тестовое_задание
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            string currentPath = AppDomain.CurrentDomain.BaseDirectory;
+            this.WORDS = Path.Combine(currentPath, @"..\..\RUS.txt");
+            
             minWordCount.TextChanged += minWordCount_TextChanged;
             maxWordCount.TextChanged += maxWordCount_TextChanged;
         }
